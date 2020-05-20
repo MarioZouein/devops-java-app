@@ -16,7 +16,7 @@ steps:
     options: 
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
-    codeCoverageToolOptions: 'Cobertura'
+    codeCoverageToolOptions: 'JaCoCo'
     codeCoverageClassFilesDirectories: '.'
     javaHomeOption: 'JDKVersion'
 
