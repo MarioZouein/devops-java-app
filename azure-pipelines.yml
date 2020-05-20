@@ -12,7 +12,7 @@ pool:
 steps:
 - task: Ant@1
   inputs:
-    buildFile: 'build.xml'
+    buildFile: './Assingment3/build.xml'
     options: 
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
