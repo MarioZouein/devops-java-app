@@ -10,17 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Gradle@2
+- task: Ant@1
   inputs:
-    workingDirectory: ''
-    gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
+    buildFile: 'build.xml'
+    options: 
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
-    tasks: 'build'
+    codeCoverageToolOptions: 'Cobertura'
+    codeCoverageClassFilesDirectories: '.'
+    javaHomeOption: 'JDKVersion'
 
 - task: CopyFiles@2
   inputs:
